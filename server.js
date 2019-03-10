@@ -33,15 +33,15 @@ var server = http.createServer(function(request, response){
 
   console.log('HTTP的路径为\n' + path)
   if(path == '/style'){
-    response.setHeader('Content-Type', 'texe/css; charset=utf-8')
+    response.setHeader('Content-Type', 'text/css; charset=utf-8')
     response.write('<body>{background-color: #ddd;}h1{clolr: red;}')
     response.end()
   }else if(path == '/script'){
-    response.setHeader('Content-Type', 'texe/javascript; charset=utf-8')
+    response.setHeader('Content-Type', 'text/javascript; charset=utf-8')
     response.write('alert("这是JS执行的")')
     response.end()
   }else if(path == '/index'){
-    response.setHeader('Content-Type', 'texe/html; charset=utf-8')
+    response.setHeader('Content-Type', 'text/html; charset=utf-8')
     response.write('<!DOCTYPE>\n<html>' +
       '<head><link rel="stylesheet" href="/style">' +
       '</head><body>' +
